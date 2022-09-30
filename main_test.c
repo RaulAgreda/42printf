@@ -15,6 +15,6 @@ int	main(int argc, char **argv)
 	// printf("%p\n", test);
 	// printf("%x\n", UINT_MAX);
 	ft_printf("something %X %d %d\n", 0xfffffffff,4 ,5);
-	printf("Original:	%p %d %i %%\n", test, 012, 012);
-	ft_printf("Mine:		%p %d %i %%\n", test, 012, 012);
+	printf("Original:	%p %x %d %i %% %. hola\n", test, test, 012, 012);
+	ft_printf("Mine:		%p %x %d %i %% %h hola\n", test, test, 012, 012);
 }

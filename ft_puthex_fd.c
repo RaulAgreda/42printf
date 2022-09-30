@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void	ft_puthex_fd(unsigned int n, int fd, int mayus)
+int	ft_puthex_fd(unsigned int n, int fd, int mayus)
 {
 	char	c;
 	char	buffer[16];
@@ -23,5 +23,6 @@ void	ft_puthex_fd(unsigned int n, int fd, int mayus)
 		n /= 16;
 		i += 1;
 	}
-	write(1, buffer + 16 - i, i);
+	write(fd, buffer + 16 - i, i);
+	return (i);
 }

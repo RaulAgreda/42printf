@@ -14,7 +14,7 @@ BONUS_RE 	= .
 all:		${NAME}
 
 ${NAME}:	${OBJS} ${LIBFT_OBJS}
-			${AR} ${NAME} ${OBJS} ${LIBFT_SRCS}
+			${AR} ${NAME} ${OBJS} ${LIBFT_OBJS}
 
 .c.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -23,6 +23,9 @@ ${NAME}:	${OBJS} ${LIBFT_OBJS}
 # 			${AR} ${NAME} ${OBJS} ${BOBJS}
 
 # bonus:  ${BONUS_RE}
+
+normi: 
+			norminette ${LIBFT_SRCS} ${SRCS}
 
 clean:	
 			${RM} ${OBJS} ${BOBJS} ${LIBFT_OBJS}
